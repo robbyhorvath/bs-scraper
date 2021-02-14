@@ -1,12 +1,11 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const fs = require('fs');
-const { elementsLocated } = require('selenium-webdriver/lib/until');
-const date = new Date();
+const config = require('./config');
 
-const username = 'BrickFlippa';
-const password = 'Justbrickit';
-const zipcode = '18411';
-const writefile = 'data.txt';
+const username = config.username;
+const password = config.password;
+const zipcode = config.zipcode;
+const writefile = config.writefile;
 
 (async function scrape() {
 	try {
